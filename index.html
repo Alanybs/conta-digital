@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conta Digital - PIX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Conta Digital</h1>
+
+    <!-- Exibe o saldo disponível -->
+    <div class="saldo">
+      <p><strong>Saldo disponível:</strong> <span id="saldo">R$ 0,00</span></p>
+    </div>
+
+    <!-- Formulário para depósito -->
+    <div class="transacoes">
+      <h2>Depositar</h2>
+      <input type="number" id="valorDeposito" placeholder="Valor para depósito" />
+      <button onclick="depositar()">Depositar</button>
+    </div>
+
+    <!-- Formulário para transferência -->
+    <div class="transacoes">
+      <h2>Transferir via PIX</h2>
+      <input type="number" id="valorTransferencia" placeholder="Valor para transferência" />
+      <button onclick="transferir()">Transferir</button>
+    </div>
+
+    <!-- Exibe mensagens de erro/sucesso -->
+    <div class="mensagens" id="mensagens"></div>
+
+    <!-- Histórico de transações -->
+    <h2>Histórico de Transações</h2>
+    <ul id="historicoTransacoes"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
